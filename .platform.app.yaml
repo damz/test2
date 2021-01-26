@@ -1,6 +1,14 @@
 name: app
-type: "golang:1.12"
+type: "php:8"
 disk: 1024
+
+dependencies:
+    php:
+        composer/composer: '^2.0'
+
+hooks:
+    build: |
+        composer --version
 
 web:
     locations:
